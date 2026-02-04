@@ -8,10 +8,8 @@
     <link rel="icon" href="favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Figtree:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-      rel="stylesheet"
-    />
+    <!-- Distinctive aerospace fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   </head>
   <body>
     <GlobalScripts />
@@ -19,18 +17,21 @@
       <nav class="navbar">
         <img src="LASU_logo.png" alt="LASU Logo" class="logo" />
         <div class="menu-desktop">
-          <a href="#">Lanzamientos</a>
-          <a href="#">Contacto</a>
+          <a href="lanzamientos.html">Lanzamientos</a>
+          <a href="contacto.html">Contacto</a>
         </div>
       </nav>
     </header>
+    
     <!-- Menú móvil -->
     <aside class="menu-mobile" id="menuMobile">
-      <a href="#">Lanzamientos</a>
-      <a href="#">Contacto</a>
+      <a href="lanzamientos.html">Lanzamientos</a>
+      <a href="contacto.html">Contacto</a>
     </aside>
+    
     <!-- Overlay -->
     <div class="overlay" id="overlay"></div>
+    
     <!-- UI ROOT -->
     <div id="ui-root">
       <button class="menu-btn" id="menuBtn" aria-label="Abrir menú">
@@ -39,61 +40,56 @@
         <span></span>
       </button>
     </div>
-    <!-- Contenido -->
-    <div
-      class="hero"
-      style="background-image: url(&quot;lasu_banner-no-logo.png&quot;)"
-    >
+    
+    <!-- Hero Section -->
+    <div class="hero" style="background-image: url('lasu_banner-no-logo.png')">
       <div class="nl">
         <h2>TLV1</h2>
         <a href="nl.html"><button class="btn-vaso">Resumen</button></a>
       </div>
     </div>
+    
     <main>
       <div>
         <div class="article">
           <p>
-            LASU se constituye como una startup privada uruguaya enfocada en infraestructura tecnológica para comunicaciones de alta velocidad, investigación científica aplicada y sistemas de transporte espacial.
+            LASU se constituye como una <strong>startup privada uruguaya</strong> enfocada en infraestructura tecnológica para comunicaciones de alta velocidad, investigación científica aplicada y sistemas de transporte espacial.
           </p>
         </div>
+        
         <div class="article">
           <p>
             A través de manufactura propia, desarrollaremos
-            líneas de producción e investigación autosustentables, eficientes y de
+            <strong>líneas de producción e investigación autosustentables</strong>, eficientes y de
             bajo costo a largo plazo.
           </p>
         </div>
+        
         <div class="article">
           <p>
-            Diseñamos nuestro propio software y hardware para
+            Diseñamos nuestro propio <strong>software y hardware</strong> para
             garantizar control, comprensión y soberanía tecnológica.
           </p>
         </div>
+        
         <div class="article">
           <p>
-            Con metodología científica rigurosa
+            Con <strong>metodología científica rigurosa</strong>
             avanzamos hacia la exploración espacial.
           </p>
         </div>
       </div>
       
-      <div
-        class="hero"
-        style="
-          background-image: url(&quot;https://mrwallpaper.com/images/hd/earth-surface-in-space-gps9axxa747nj3ra.jpg&quot;);
-        "
-      >
-        <div class="article" style="max-width: 40%;">
+      <div class="hero" style="background-image: url('https://mrwallpaper.com/images/hd/earth-surface-in-space-gps9axxa747nj3ra.jpg')">
+        <div class="article" style="max-width: 50%;">
           <h2>
             Siguiente investigación de
             <a href="https://lasu-aerospace.github.io/LRL/research.html">LRL</a>
           </h2>
           <p>
-            <strong
-              >Próximamente presentaremos la formalización preliminar de la
-              segunda parte del informe sobre la Teoría de Simetría Topológica
-              Unificada.</strong
-            >
+            <strong>Próximamente presentaremos la formalización preliminar de la
+            segunda parte del informe sobre la Teoría de Simetría Topológica
+            Unificada.</strong>
             En esta nueva etapa abordaremos explícitamente los aspectos que
             permanecieron inconclusos en la formulación inicial, con el objetivo
             de consolidar el marco teórico y establecer las bases conceptuales
@@ -105,18 +101,19 @@
             consistente de la gravedad a escala cuántica.
           </p>
         </div>
-        <iframe class="media-frame" src="stu.pdf" style="width: 100%;"></iframe>
+        <iframe class="media-frame" src="stu.pdf"></iframe>
       </div>
       
-      <div class="article" style="min-width: 100%;">
+      <div class="article" style="min-width: 100%; max-width: 90%;">
         <h2>
           Desarrollo actual de
           <a href="https://lasu-aerospace.github.io/.github/nl">TLV-1</a>
         </h2>
-        <p class="article">Diseño de sensores (RTD-ADC / BDD, P. Wheatstone), diseño de Alnair (PCB), organización preliminar</p>
+        <p>Diseño de sensores (RTD-ADC / BDD, P. Wheatstone), diseño de Alnair (PCB), organización preliminar</p>
       </div>
     </main>
-    <!-- Footer y scripts -->
+    
+    <!-- Footer -->
     <footer class="site-footer">
       <a href="#">GitHub</a>
     </footer>
@@ -125,13 +122,3 @@
     <script src="overlay.js" defer></script>
   </body>
 </html>
-
-<!---
-Contenidos
-
-Index:
-
-- Programa TLV
-- Último lanzamiento
-
---->
