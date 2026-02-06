@@ -40,13 +40,13 @@ body {
 
 /* Starfield background effect */
 body::before {
-  content: "";
+  content: '';
   position: fixed;
   width: 200%;
   height: 200%;
   top: -50%;
   left: -50%;
-  background-image:
+  background-image: 
     radial-gradient(2px 2px at 20% 30%, white, transparent),
     radial-gradient(2px 2px at 60% 70%, white, transparent),
     radial-gradient(1px 1px at 50% 50%, white, transparent),
@@ -54,7 +54,7 @@ body::before {
     radial-gradient(2px 2px at 90% 60%, white, transparent),
     radial-gradient(1px 1px at 33% 80%, white, transparent),
     radial-gradient(1px 1px at 15% 90%, white, transparent);
-  background-size:
+  background-size: 
     550px 550px,
     350px 350px,
     250px 250px,
@@ -70,20 +70,16 @@ body::before {
 }
 
 @keyframes stars {
-  from {
-    transform: translateY(0);
-  }
-  to {
-    transform: translateY(-1000px);
-  }
+  from { transform: translateY(0); }
+  to { transform: translateY(-1000px); }
 }
 
 /* Grid overlay */
 body::after {
-  content: "";
+  content: '';
   position: fixed;
   inset: 0;
-  background-image:
+  background-image: 
     linear-gradient(rgba(0, 217, 255, 0.03) 1px, transparent 1px),
     linear-gradient(90deg, rgba(0, 217, 255, 0.03) 1px, transparent 1px);
   background-size: 100px 100px;
@@ -120,12 +116,10 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: linear-gradient(
-    to bottom,
-    rgba(10, 14, 26, 0.95) 0%,
+  background: linear-gradient(to bottom, 
+    rgba(10, 14, 26, 0.95) 0%, 
     rgba(10, 14, 26, 0.7) 70%,
-    transparent 100%
-  );
+    transparent 100%);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(0, 217, 255, 0.1);
   z-index: 1000;
@@ -177,14 +171,12 @@ a:hover {
 }
 
 .menu-desktop a::before {
-  content: "";
+  content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(0, 217, 255, 0.1),
-    rgba(0, 150, 255, 0.05)
-  );
+  background: linear-gradient(135deg, 
+    rgba(0, 217, 255, 0.1), 
+    rgba(0, 150, 255, 0.05));
   opacity: 0;
   transition: opacity 0.3s ease;
   z-index: -1;
@@ -252,7 +244,7 @@ a:hover {
 }
 
 .menu-mobile a::before {
-  content: "›";
+  content: '›';
   position: absolute;
   left: 0;
   opacity: 0;
@@ -278,15 +270,9 @@ body.menu-open .menu-mobile a {
   transform: translateX(0);
 }
 
-body.menu-open .menu-mobile a:nth-child(1) {
-  transition-delay: 0.1s;
-}
-body.menu-open .menu-mobile a:nth-child(2) {
-  transition-delay: 0.15s;
-}
-body.menu-open .menu-mobile a:nth-child(3) {
-  transition-delay: 0.2s;
-}
+body.menu-open .menu-mobile a:nth-child(1) { transition-delay: 0.1s; }
+body.menu-open .menu-mobile a:nth-child(2) { transition-delay: 0.15s; }
+body.menu-open .menu-mobile a:nth-child(3) { transition-delay: 0.2s; }
 
 /* ================= UI ROOT & HAMBURGER ================= */
 #ui-root {
@@ -380,7 +366,7 @@ body.menu-open .overlay {
 }
 
 .hero::before {
-  content: "";
+  content: '';
   position: absolute;
   inset: 0;
   background: linear-gradient(
@@ -446,7 +432,7 @@ body.menu-open .overlay {
   z-index: 0;
   transition: all 0.4s ease;
   clip-path: polygon(8% 0%, 100% 0%, 92% 100%, 0% 100%);
-  box-shadow:
+  box-shadow: 
     0 0 20px rgba(0, 217, 255, 0.2),
     inset 0 0 20px rgba(0, 217, 255, 0.05);
 }
@@ -458,7 +444,10 @@ body.menu-open .overlay {
   top: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  background: linear-gradient(90deg, 
+    transparent, 
+    var(--accent), 
+    transparent);
   transition: left 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: -1;
 }
@@ -466,7 +455,7 @@ body.menu-open .overlay {
 .btn-vaso:hover {
   color: var(--space-darker);
   border-color: white;
-  box-shadow:
+  box-shadow: 
     0 0 40px var(--accent-glow),
     inset 0 0 40px rgba(0, 217, 255, 0.3);
   transform: translateY(-3px);
@@ -487,38 +476,16 @@ body.menu-open .overlay {
   font-size: 1.15rem;
   line-height: 2;
   color: var(--text-secondary);
-  background: linear-gradient(
-    135deg,
+  background: linear-gradient(135deg,
     rgba(0, 217, 255, 0.03),
-    rgba(0, 150, 255, 0.02)
-  );
+    rgba(0, 150, 255, 0.02));
   border: 1px solid rgba(0, 217, 255, 0.1);
   border-radius: 4px;
   backdrop-filter: blur(10px);
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-  animation-delay: calc(var(--article-index, 0) * 0.15s);
-}
-
-.article:nth-child(1) {
-  --article-index: 1;
-}
-.article:nth-child(2) {
-  --article-index: 2;
-}
-.article:nth-child(3) {
-  --article-index: 3;
-}
-.article:nth-child(4) {
-  --article-index: 4;
-}
-.article:nth-child(5) {
-  --article-index: 5;
 }
 
 .article::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -605,7 +572,7 @@ body.menu-open .overlay {
   border-radius: 8px;
   margin: 3rem auto;
   display: block;
-  box-shadow:
+  box-shadow: 
     0 0 40px rgba(0, 217, 255, 0.2),
     inset 0 0 40px rgba(0, 217, 255, 0.05);
   background: rgba(5, 8, 16, 0.8);
@@ -625,7 +592,9 @@ body.menu-open .overlay {
 .site-footer {
   width: 100%;
   padding: 30px 40px;
-  background: linear-gradient(to top, rgba(10, 14, 26, 0.95), transparent);
+  background: linear-gradient(to top,
+    rgba(10, 14, 26, 0.95),
+    transparent);
   border-top: 1px solid rgba(0, 217, 255, 0.2);
   display: flex;
   gap: 40px;
@@ -638,14 +607,17 @@ body.menu-open .overlay {
 }
 
 .site-footer::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
   width: 200px;
   height: 1px;
-  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  background: linear-gradient(90deg,
+    transparent,
+    var(--accent),
+    transparent);
   box-shadow: 0 0 10px var(--accent-glow);
 }
 
@@ -661,7 +633,7 @@ body.menu-open .overlay {
 }
 
 .site-footer a::after {
-  content: "";
+  content: '';
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -724,7 +696,7 @@ body.menu-open .overlay {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-
+  
   body::before {
     animation: none;
   }
@@ -769,30 +741,14 @@ body.menu-open .overlay {
 .launch-card {
   max-width: 1000px;
   margin: 60px auto;
-  background: linear-gradient(
-    135deg,
+  background: linear-gradient(135deg,
     rgba(0, 217, 255, 0.05),
-    rgba(0, 150, 255, 0.02)
-  );
+    rgba(0, 150, 255, 0.02));
   border: 1px solid rgba(0, 217, 255, 0.2);
   border-radius: 8px;
   overflow: hidden;
   backdrop-filter: blur(10px);
   transition: all 0.4s ease;
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-  animation-delay: calc(var(--launch-index, 0) * 0.2s);
-}
-
-.launch-card:nth-child(2) {
-  --launch-index: 1;
-}
-.launch-card:nth-child(3) {
-  --launch-index: 2;
-}
-.launch-card:nth-child(4) {
-  --launch-index: 3;
 }
 
 .launch-card:hover {
@@ -918,17 +874,13 @@ body.menu-open .overlay {
 }
 
 .contact-form-wrapper {
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.2s forwards;
+  /* Animation handled by scroll-animate.js */
 }
 
 .contact-form {
-  background: linear-gradient(
-    135deg,
+  background: linear-gradient(135deg,
     rgba(0, 217, 255, 0.05),
-    rgba(0, 150, 255, 0.02)
-  );
+    rgba(0, 150, 255, 0.02));
   border: 1px solid rgba(0, 217, 255, 0.2);
   border-radius: 8px;
   padding: 50px 40px;
@@ -958,7 +910,7 @@ body.menu-open .overlay {
   border: 1px solid rgba(0, 217, 255, 0.2);
   border-radius: 4px;
   color: var(--text-primary);
-  font-family: "Rajdhani", sans-serif;
+  font-family: 'Rajdhani', sans-serif;
   font-size: 1rem;
   transition: all 0.3s ease;
 }
@@ -988,19 +940,15 @@ body.menu-open .overlay {
 
 /* Contact Info Sidebar */
 .contact-info {
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.4s forwards;
+  /* Animation handled by scroll-animate.js */
 }
 
 .info-section {
   margin-bottom: 40px;
   padding: 30px;
-  background: linear-gradient(
-    135deg,
+  background: linear-gradient(135deg,
     rgba(0, 217, 255, 0.03),
-    rgba(0, 150, 255, 0.01)
-  );
+    rgba(0, 150, 255, 0.01));
   border: 1px solid rgba(0, 217, 255, 0.15);
   border-radius: 8px;
   backdrop-filter: blur(10px);
@@ -1088,7 +1036,7 @@ body.menu-open .overlay {
 }
 
 .interest-list li::before {
-  content: "▸";
+  content: '▸';
   position: absolute;
   left: 0;
   color: var(--accent);
@@ -1101,20 +1049,20 @@ body.menu-open .overlay {
     grid-template-columns: 1fr;
     gap: 40px;
   }
-
+  
   .launch-specs {
     grid-template-columns: 1fr;
   }
-
+  
   .launch-card {
     margin: 40px 20px;
   }
-
+  
   .launch-header,
   .launch-body {
     padding: 30px 25px;
   }
-
+  
   .contact-form {
     padding: 40px 30px;
   }
@@ -1124,9 +1072,86 @@ body.menu-open .overlay {
   .launch-title {
     font-size: 2rem;
   }
-
+  
   .launch-header,
   .launch-body {
     padding: 25px 20px;
+  }
+}
+
+/* ================= SCROLL ANIMATIONS ================= */
+/* Base state for all scroll-animated elements */
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 
+    opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Active state when element enters viewport */
+.scroll-animate.fade-in-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Fade out state when element leaves viewport */
+.scroll-animate.fade-out-active {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: 
+    opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Staggered animation delays for multiple elements */
+.scroll-animate:nth-child(1) {
+  transition-delay: 0s;
+}
+
+.scroll-animate:nth-child(2) {
+  transition-delay: 0.1s;
+}
+
+.scroll-animate:nth-child(3) {
+  transition-delay: 0.2s;
+}
+
+.scroll-animate:nth-child(4) {
+  transition-delay: 0.3s;
+}
+
+.scroll-animate:nth-child(5) {
+  transition-delay: 0.4s;
+}
+
+.scroll-animate:nth-child(6) {
+  transition-delay: 0.5s;
+}
+
+/* Special handling for hero sections - they should always be visible */
+.hero .nl,
+.hero .article {
+  /* Keep existing animations */
+}
+
+/* Override for elements that should not have scroll animation */
+.no-scroll-animate {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .scroll-animate {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  
+  .scroll-animate.fade-in-active,
+  .scroll-animate.fade-out-active {
+    opacity: 1 !important;
+    transform: none !important;
   }
 }
