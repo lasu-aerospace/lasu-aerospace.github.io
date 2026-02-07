@@ -1,173 +1,183 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LASU | Contacto</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="icon" href="favicon.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  </head>
-  <body>
-    <GlobalScripts />
-    <header class="header">
-      <nav class="navbar">
-        <a href="index.html">
-          <img src="LASU_logo.png" alt="LASU Logo" class="logo" />
-        </a>
-        <div class="menu-desktop">
-          <a href="lanzamientos.html">Lanzamientos</a>
-          <a href="contacto.html">Contacto</a>
-        </div>
-      </nav>
-    </header>
-    
-    <!-- Menú móvil -->
-    <aside class="menu-mobile" id="menuMobile">
-      <a href="lanzamientos.html">Lanzamientos</a>
-      <a href="contacto.html">Contacto</a>
-    </aside>
-    
-    <!-- Overlay -->
-    <div class="overlay" id="overlay"></div>
-    
-    <!-- UI ROOT -->
-    <div id="ui-root">
-      <button class="menu-btn" id="menuBtn" aria-label="Abrir menú">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LASU | Contacto</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <GlobalScripts />
+  <header class="header">
+    <nav class="navbar">
+      <a href="index.html">
+        <img src="LASU_logo.png" alt="LASU Logo" class="logo" />
+      </a>
+      <div class="menu-desktop">
+        <a href="lanzamientos.html">Lanzamientos</a>
+        <a href="contacto.html">Contacto</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Menú móvil -->
+  <aside class="menu-mobile" id="menuMobile">
+    <a href="lanzamientos.html">Lanzamientos</a>
+    <a href="contacto.html">Contacto</a>
+  </aside>
+
+  <!-- Overlay -->
+  <div class="overlay" id="overlay"></div>
+
+  <!-- UI ROOT -->
+  <div id="ui-root">
+    <button class="menu-btn" id="menuBtn" aria-label="Abrir menú">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+
+  <!-- Hero Section -->
+  <div class="hero"
+    style="background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920')">
+    <div class="nl">
+      <h2>Conectemos</h2>
     </div>
-    
-    <!-- Hero Section -->
-    <div class="hero" style="background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920')">
-      <div class="nl">
-        <h2>Conectemos</h2>
+  </div>
+
+  <main>
+    <div class="contact-intro article" style="max-width: 90%;">
+      <h2>Contacto</h2>
+      <p>
+        ¿Interesado en colaborar, invertir o simplemente aprender más sobre LASU?
+        Estamos abiertos a conversaciones con investigadores, ingenieros, inversores
+        y entusiastas del espacio.
+      </p>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="contact-container">
+      <div class="contact-form-wrapper">
+        <form class="contact-form" action="https://formspree.io/f/xeelqpwj" method="POST">
+          <div class="form-group">
+            <label for="nombre">Nombre completo</label>
+            <input type="text" id="nombre" name="nombre" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div class="form-group">
+            <label for="asunto">Asunto</label>
+            <select id="asunto" name="asunto" required>
+              <option value="">Selecciona una opción</option>
+              <option value="colaboracion">Colaboración técnica</option>
+              <option value="inversion">Oportunidades de inversión</option>
+              <option value="prensa">Consultas de prensa</option>
+              <option value="academico">Colaboración académica</option>
+              <option value="otro">Otro</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="6" required></textarea>
+        </form>
+
+        <button type="submit" class="btn-vaso btn-submit">
+          Enviar mensaje
+        </button>
       </div>
     </div>
-    
-    <main>
-      <div class="contact-intro article" style="max-width: 90%;">
-        <h2>Contacto</h2>
-        <p>
-          ¿Interesado en colaborar, invertir o simplemente aprender más sobre LASU?
-          Estamos abiertos a conversaciones con investigadores, ingenieros, inversores
-          y entusiastas del espacio.
-        </p>
-      </div>
 
-      <!-- Contact Form -->
-      <div class="contact-container">
-        <div class="contact-form-wrapper">
-          <div class="contact-form">
-            <div class="form-group">
-              <label for="nombre">Nombre completo</label>
-              <input type="text" id="nombre" name="nombre" required />
-            </div>
-
-            <div class="form-group">
-              <label for="email">Correo electrónico</label>
-              <input type="email" id="email" name="email" required />
-            </div>
-
-            <div class="form-group">
-              <label for="asunto">Asunto</label>
-              <select id="asunto" name="asunto" required>
-                <option value="">Selecciona una opción</option>
-                <option value="colaboracion">Colaboración técnica</option>
-                <option value="inversion">Oportunidades de inversión</option>
-                <option value="prensa">Consultas de prensa</option>
-                <option value="academico">Colaboración académica</option>
-                <option value="otro">Otro</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label for="mensaje">Mensaje</label>
-              <textarea id="mensaje" name="mensaje" rows="6" required></textarea>
-            </div>
-
-            <button type="submit" class="btn-vaso btn-submit">
-              Enviar mensaje
-            </button>
-          </div>
+    <!-- Contact Info Sidebar -->
+    <div class="contact-info">
+      <div class="info-section">
+        <h3>Información</h3>
+        <div class="info-item">
+          <span class="info-label">Ubicación</span>
+          <span class="info-value">Montevideo, Uruguay</span>
         </div>
-
-        <!-- Contact Info Sidebar -->
-        <div class="contact-info">
-          <div class="info-section">
-            <h3>Información</h3>
-            <div class="info-item">
-              <span class="info-label">Ubicación</span>
-              <span class="info-value">Montevideo, Uruguay</span>
-            </div>
-            <div class="info-item">
-              <span class="info-label">Email</span>
-              <span class="info-value">contact@lasu.space</span>
-            </div>
-          </div>
-
-          <div class="info-section">
-            <h3>Síguenos</h3>
-            <div class="social-links">
-              <a href="#" class="social-link">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                </svg>
-                GitHub
-              </a>
-              <a href="#" class="social-link">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
-                </svg>
-                Twitter
-              </a>
-              <a href="#" class="social-link">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                  <rect x="2" y="9" width="4" height="12"></rect>
-                  <circle cx="4" cy="4" r="2"></circle>
-                </svg>
-                LinkedIn
-              </a>
-            </div>
-          </div>
-
-          <div class="info-section">
-            <h3>Áreas de interés</h3>
-            <ul class="interest-list">
-              <li>Ingeniería aeroespacial</li>
-              <li>Sistemas de propulsión</li>
-              <li>Aviónica y telemetría</li>
-              <li>Física teórica aplicada</li>
-              <li>Manufactura avanzada</li>
-            </ul>
-          </div>
+        <div class="info-item">
+          <span class="info-label">Email</span>
+          <span class="info-value">contact@lasu.space</span>
         </div>
       </div>
 
-      <div class="article" style="max-width: 90%; margin-top: 80px;">
-        <h2>Oportunidades</h2>
-        <p>
-          Buscamos colaboradores técnicos, inversores visionarios y socios estratégicos
-          que compartan nuestra pasión por la exploración espacial y el desarrollo
-          tecnológico sostenible. Si crees que puedes contribuir a nuestra misión,
-          nos encantaría conocerte.
-        </p>
+      <div class="info-section">
+        <h3>Síguenos</h3>
+        <div class="social-links">
+          <a href="#" class="social-link">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path
+                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+              </path>
+            </svg>
+            GitHub
+          </a>
+          <a href="#" class="social-link">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path
+                d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+              </path>
+            </svg>
+            Twitter
+          </a>
+          <a href="#" class="social-link">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+            LinkedIn
+          </a>
+        </div>
       </div>
-    </main>
-    
-    <!-- Footer -->
-    <footer class="site-footer">
-      <a href="#">GitHub</a>
-    </footer>
 
-    <script src="scripts.js" defer></script>
-    <script src="overlay.js" defer></script>
-    <script src="contact.js" defer></script>
-    <script src="scroll.js" defer></script>
-  </body>
+      <div class="info-section">
+        <h3>Áreas de interés</h3>
+        <ul class="interest-list">
+          <li>Ingeniería aeroespacial</li>
+          <li>Sistemas de propulsión</li>
+          <li>Aviónica y telemetría</li>
+          <li>Física teórica aplicada</li>
+          <li>Manufactura avanzada</li>
+        </ul>
+      </div>
+    </div>
+    </div>
+
+    <div class="article" style="max-width: 90%; margin-top: 80px;">
+      <h2>Oportunidades</h2>
+      <p>
+        Buscamos colaboradores técnicos, inversores visionarios y socios estratégicos
+        que compartan nuestra pasión por la exploración espacial y el desarrollo
+        tecnológico sostenible. Si crees que puedes contribuir a nuestra misión,
+        nos encantaría conocerte.
+      </p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <a href="#">GitHub</a>
+  </footer>
+
+  <script src="scripts.js" defer></script>
+  <script src="overlay.js" defer></script>
+  <script src="contact.js" defer></script>
+  <script src="scroll.js" defer></script>
+</body>
+
 </html>
